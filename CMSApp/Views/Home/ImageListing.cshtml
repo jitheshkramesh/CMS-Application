@@ -1,0 +1,15 @@
+﻿@model IEnumerable<CMSApp.Models.FEATURE>
+
+    @foreach (var item in Model)
+    {
+
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+    <div class="boxer_features">
+        <img src="@Url.Content(item.FEATURE_PATH)" border="0" width="150" height="150"/><br />
+                                                                <span>
+                                                                    @Html.ActionLink(item.FEATURE_NAME, "", "")
+                                                                    </span>
+    </div>
+    </div>
+    }
+

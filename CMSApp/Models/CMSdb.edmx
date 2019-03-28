@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CMSAPPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="COMPANY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="COMP_NAME" Type="varchar" MaxLength="500" />
+          <Property Name="COMP_TITLE" Type="varchar" MaxLength="500" />
+          <Property Name="COMP_ADDRESS" Type="varchar" MaxLength="500" />
+          <Property Name="COMP_BANNER" Type="varchar" MaxLength="500" />
+          <Property Name="DATE_EVENT" Type="datetime" />
+          <Property Name="ABOUTUS1" Type="nvarchar(max)" />
+          <Property Name="ABOUTUS2" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="FEATURES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FEATURE_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="FEATURE_PATH" Type="varchar" MaxLength="500" />
+          <Property Name="SEQ" Type="int" />
+        </EntityType>
+        <EntityType Name="MENU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MENU_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="MENU_ADDRESS" Type="varchar" MaxLength="500" />
+          <Property Name="SEQ" Type="int" />
+          <Property Name="PARENTID" Type="int" />
+        </EntityType>
+        <EntityType Name="USERLOGIN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERNAME" Type="varchar" MaxLength="50" />
+          <Property Name="PASSWRD" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="CMSAPPModelStoreContainer">
+          <EntitySet Name="COMPANY" EntityType="Self.COMPANY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FEATURES" EntityType="Self.FEATURES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MENU" EntityType="Self.MENU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USERLOGIN" EntityType="Self.USERLOGIN" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CMSAPPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="COMPANY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="COMP_NAME" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="COMP_TITLE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="COMP_ADDRESS" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="COMP_BANNER" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="DATE_EVENT" Type="DateTime" Precision="3" />
+          <Property Name="ABOUTUS1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ABOUTUS2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FEATURE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FEATURE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FEATURE_PATH" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SEQ" Type="Int32" />
+        </EntityType>
+        <EntityType Name="MENU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MENU_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MENU_ADDRESS" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SEQ" Type="Int32" />
+          <Property Name="PARENTID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="USERLOGIN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PASSWRD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="CMSAPPEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="COMPANies" EntityType="Self.COMPANY" />
+          <EntitySet Name="FEATURES" EntityType="Self.FEATURE" />
+          <EntitySet Name="MENUs" EntityType="Self.MENU" />
+          <EntitySet Name="USERLOGINs" EntityType="Self.USERLOGIN" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CMSAPPModelStoreContainer" CdmEntityContainer="CMSAPPEntities">
+          <EntitySetMapping Name="COMPANies">
+            <EntityTypeMapping TypeName="CMSAPPModel.COMPANY">
+              <MappingFragment StoreEntitySet="COMPANY">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="COMP_NAME" ColumnName="COMP_NAME" />
+                <ScalarProperty Name="COMP_TITLE" ColumnName="COMP_TITLE" />
+                <ScalarProperty Name="COMP_ADDRESS" ColumnName="COMP_ADDRESS" />
+                <ScalarProperty Name="COMP_BANNER" ColumnName="COMP_BANNER" />
+                <ScalarProperty Name="DATE_EVENT" ColumnName="DATE_EVENT" />
+                <ScalarProperty Name="ABOUTUS1" ColumnName="ABOUTUS1" />
+                <ScalarProperty Name="ABOUTUS2" ColumnName="ABOUTUS2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FEATURES">
+            <EntityTypeMapping TypeName="CMSAPPModel.FEATURE">
+              <MappingFragment StoreEntitySet="FEATURES">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FEATURE_NAME" ColumnName="FEATURE_NAME" />
+                <ScalarProperty Name="FEATURE_PATH" ColumnName="FEATURE_PATH" />
+                <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MENUs">
+            <EntityTypeMapping TypeName="CMSAPPModel.MENU">
+              <MappingFragment StoreEntitySet="MENU">
+                <ScalarProperty Name="PARENTID" ColumnName="PARENTID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MENU_NAME" ColumnName="MENU_NAME" />
+                <ScalarProperty Name="MENU_ADDRESS" ColumnName="MENU_ADDRESS" />
+                <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERLOGINs">
+            <EntityTypeMapping TypeName="CMSAPPModel.USERLOGIN">
+              <MappingFragment StoreEntitySet="USERLOGIN">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="PASSWRD" ColumnName="PASSWRD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

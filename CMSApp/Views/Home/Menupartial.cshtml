@@ -1,0 +1,13 @@
+﻿@model IEnumerable<CMSApp.Models.MENU>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="">
+                @Html.ActionLink(item.MENU_NAME, "", "");
+            </a>
+
+        </li>
+    }
+</ul>

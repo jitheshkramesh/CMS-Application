@@ -1,0 +1,110 @@
+ 
+ 
+
+ 
+
+/* -------------------------------------
+    CSS for Radio Button Type-1 
+---------------------------------------- */
+
+input[type=radio] {
+display:none;
+}
+/*--------------------------------------------------------------------------------
+Creating radio button and label as a Single unit(for Cross browser compatibility)
+----------------------------------------------------------------------------------*/
+input[type=radio] + label{
+padding-left:31px;
+display:inline-block; 
+line-height:24px;
+background-repeat:no-repeat;
+cursor:pointer;
+}
+
+input[type=radio]:checked + label {
+background-position: 0 -24px;
+}
+
+label{
+background-image:url('../images/radio2.png');
+}
+
+/* -------------------------------------
+    CSS for Radio Button Type-2 
+---------------------------------------- */
+
+input[type=radio].bachelor {
+display:none;
+}
+/*--------------------------------------------------------------------------------
+Creating radio button and label as a Single unit(for Cross browser compatibility)
+----------------------------------------------------------------------------------*/
+input[type=radio].bachelor + label.degree{
+padding-left:31px;
+display:inline-block;
+line-height:24px;
+background-repeat:no-repeat;
+cursor:pointer;
+}
+
+input[type=radio].bachelor:checked + label.degree {
+background-position: 0 -24px;
+}
+
+label.degree{
+background-image:url('../images/radio1.png');
+}
+
+/* -------------------------------------
+    CSS for Checkbox Type-1
+---------------------------------------- */
+
+input[type=checkbox].check1 {
+display:none;
+}
+/*--------------------------------------------------------------------------------
+Creating Checkbox and label as a Single unit(for Cross browser compatibility)
+----------------------------------------------------------------------------------*/
+input[type=checkbox].check1 + label.label1{
+padding-left:35px; 
+display:inline-block;
+line-height:30px;
+background-repeat:no-repeat;
+cursor:pointer;
+}
+
+input[type=checkbox].check1:checked + label.label1 {
+background-position: 0 -30px;
+}
+
+label.label1{
+background-image:url('../images/check1.png');
+}
+
+/* -------------------------------------
+    CSS for Checkbox Type-2
+---------------------------------------- */
+
+input[type=checkbox].check2 {
+display:none;
+}
+/*--------------------------------------------------------------------------------
+Creating Checkbox and label as a Single unit(for Cross browser compatibility)
+----------------------------------------------------------------------------------*/
+input[type=checkbox].check2 + label.label2 {
+padding-left:44px;
+display:inline-block;
+line-height:34px;
+background-repeat:no-repeat;
+cursor:pointer;
+}
+
+input[type=checkbox].check2:checked + label.label2 {
+background-position: 0 -34px;
+}
+
+label.label2{
+background-image:url('../images/check2.png');
+}
+
+ 

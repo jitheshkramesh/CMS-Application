@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMSApp", "CMSApp\CMSApp.csproj", "{972454BF-FCC0-46C5-8E5E-96498DF47925}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{972454BF-FCC0-46C5-8E5E-96498DF47925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{972454BF-FCC0-46C5-8E5E-96498DF47925}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{972454BF-FCC0-46C5-8E5E-96498DF47925}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{972454BF-FCC0-46C5-8E5E-96498DF47925}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35876933-9728-4390-B026-01E756181369}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,73 @@
+﻿@model CMSApp.Models.FEATURE
+
+@{
+    ViewBag.Title = "FeatureAdd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>FeatureAdd</h2>
+
+@using (Html.BeginForm("PostFeature", "Home" ,FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "off" }))
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>FEATURE</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.ID)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.FEATURE_NAME, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.FEATURE_NAME, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.FEATURE_NAME, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.FEATURE_PATH, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.FEATURE_PATH, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.FEATURE_PATH, "", new { @class = "text-danger" })
+            <input type="file" name="file" onchange="readURL(this);" />
+        </div>
+    </div>
+
+    <div class="col col-lg-6">
+        <img id="blah" alt="Photo" style="width:200px;height:200px" src="~/Files/Images/NoImage.jpg">
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SEQ, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.SEQ, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.SEQ, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(200);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+
+</script>

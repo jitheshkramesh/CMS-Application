@@ -1,0 +1,48 @@
+﻿@model IEnumerable<CMSApp.Models.MENU>
+
+@{
+    ViewBag.Title = "MenuList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>MenuList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MENU_NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MENU_ADDRESS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEQ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PARENTID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MENU_NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MENU_ADDRESS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEQ)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "MenuAdd", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "MenuDelete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

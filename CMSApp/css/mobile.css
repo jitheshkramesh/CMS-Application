@@ -1,0 +1,186 @@
+@charset "utf-8";
+/* CSS Document */
+ 
+
+@media only screen and  (min-width:1px) and (max-width:480px) {
+	h2{
+		
+		font-size: 30px;
+		text-transform: uppercase;
+	}
+#banner_detailsfinal{
+float: none;
+    position: relative;
+margin:0 auto;
+    top: 200px;
+  width:100%;
+    z-index: 4;
+}
+
+	#banner_detailsfinal2{
+		position: absolute;
+		bottom:0;
+		left:0;
+		float: none;
+		padding:10px;
+		width:100%;
+		
+		
+		
+	}
+	
+	#banner_detailsfinal img{
+		margin:0 auto;
+		
+		
+	}
+	#mainbanner{
+		
+		display:none;
+	}
+	.paddfooter{
+		 
+padding-bottom:40px !important;
+		border-bottom:1px solid #FFF;
+		
+		
+	}
+	 #days,#hours,#minutes,#seconds{
+		display: inline-block;
+		font-size: 30px;
+		color:white;
+		background-color: #b38525;
+		padding:10px;
+		min-width: auto;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d1a24d+1,966600+100 */
+background: #d1a24d; /* Old browsers */
+background: -moz-linear-gradient(top, #d1a24d 1%, #966600 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #d1a24d 1%,#966600 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #d1a24d 1%,#966600 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1a24d', endColorstr='#966600',GradientType=0 ); /* IE6-9 */
+	border:2px outset #757171;	
+	}
+	
+	#level1 strong{
+		display: block;
+		text-align: center;
+		font-size:14px;
+		color:#97711e;
+ }
+	#level3{
+	padding:20px 0;
+	height:auto;
+ 
+	background: none;
+	
+	
+}
+		 .imgborder{
+		 width:70% !important;
+			
+			
+		}
+	#level4 #colorleft{
+ 
+ 
+	text-align: center;
+}
+#level4 #colorright{
+ 
+	text-align: center;
+	 
+	 
+}
+	#level4 #colorright h3 {
+		font-size: 24px;
+		padding:10px;
+		
+	}
+	#agenda_box{
+	position: relative;
+	width:auto;
+	text-align: center;
+	float:none;
+ 
+	
+}
+}
+	
+ 
+		@media only screen and  (min-width:481px) and (max-width:720px) {
+	 .imgborder{
+		 width:70% !important;
+			
+			
+		}
+				.paddfooter{
+		 
+padding-bottom:40px !important;
+		border-bottom:1px solid #FFF;
+		
+		
+	}
+			#level4 #colorleft{
+ 
+ 
+	text-align: center;
+}
+#level4 #colorright{
+
+ 
+	text-align: center;
+	 
+	 
+}
+	#level4 #colorright h3 {
+		font-size: 24px;
+			padding:10px !important;
+	}
+	#agenda_box{
+	position: relative;
+	width:100%;
+	text-align: center;
+	float:none;
+ 
+	
+}
+			 #days,#hours,#minutes,#seconds{
+		display: inline-block;
+		font-size: 30px;
+		color:white;
+		background-color: #b38525;
+		padding:10px;
+		min-width: 100px;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d1a24d+1,966600+100 */
+background: #d1a24d; /* Old browsers */
+background: -moz-linear-gradient(top, #d1a24d 1%, #966600 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #d1a24d 1%,#966600 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #d1a24d 1%,#966600 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1a24d', endColorstr='#966600',GradientType=0 ); /* IE6-9 */
+	border:2px outset #757171;	
+	}
+			
+			#level1 strong{
+		display: block;
+		text-align: center;
+		font-size:14px;
+		color:#97711e;
+		
+		
+	}
+	.boxers {
+    position: relative;
+    left: -120px;
+    height: 125px;
+}
+	 
+}
+
+		@media only screen and  (min-width:721px) and (max-width:960px) {
+			#level4 #colorright h3 {
+		font-size: 44px;
+			padding:10px !important;
+	}
+	 	
+}
+ 

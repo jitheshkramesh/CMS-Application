@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CMSAPPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="COMPANY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COMP_NAME" Type="varchar" MaxLength="500" />
+    <Property Name="COMP_TITLE" Type="varchar" MaxLength="500" />
+    <Property Name="COMP_ADDRESS" Type="varchar" MaxLength="500" />
+    <Property Name="COMP_BANNER" Type="varchar" MaxLength="500" />
+    <Property Name="DATE_EVENT" Type="datetime" />
+    <Property Name="ABOUTUS1" Type="nvarchar(max)" />
+    <Property Name="ABOUTUS2" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="FEATURES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FEATURE_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="FEATURE_PATH" Type="varchar" MaxLength="500" />
+    <Property Name="SEQ" Type="int" />
+  </EntityType>
+  <EntityType Name="MENU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MENU_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="MENU_ADDRESS" Type="varchar" MaxLength="500" />
+    <Property Name="SEQ" Type="int" />
+    <Property Name="PARENTID" Type="int" />
+  </EntityType>
+  <EntityType Name="USERLOGIN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERNAME" Type="varchar" MaxLength="50" />
+    <Property Name="PASSWRD" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="CMSAPPModelStoreContainer">
+    <EntitySet Name="COMPANY" EntityType="Self.COMPANY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FEATURES" EntityType="Self.FEATURES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MENU" EntityType="Self.MENU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERLOGIN" EntityType="Self.USERLOGIN" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

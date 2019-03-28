@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CMSAPPModelStoreContainer" CdmEntityContainer="CMSAPPEntities">
+    <EntitySetMapping Name="COMPANies">
+      <EntityTypeMapping TypeName="CMSAPPModel.COMPANY">
+        <MappingFragment StoreEntitySet="COMPANY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="COMP_NAME" ColumnName="COMP_NAME" />
+          <ScalarProperty Name="COMP_TITLE" ColumnName="COMP_TITLE" />
+          <ScalarProperty Name="COMP_ADDRESS" ColumnName="COMP_ADDRESS" />
+          <ScalarProperty Name="COMP_BANNER" ColumnName="COMP_BANNER" />
+          <ScalarProperty Name="DATE_EVENT" ColumnName="DATE_EVENT" />
+          <ScalarProperty Name="ABOUTUS1" ColumnName="ABOUTUS1" />
+          <ScalarProperty Name="ABOUTUS2" ColumnName="ABOUTUS2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FEATURES">
+      <EntityTypeMapping TypeName="CMSAPPModel.FEATURE">
+        <MappingFragment StoreEntitySet="FEATURES">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FEATURE_NAME" ColumnName="FEATURE_NAME" />
+          <ScalarProperty Name="FEATURE_PATH" ColumnName="FEATURE_PATH" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MENUs">
+      <EntityTypeMapping TypeName="CMSAPPModel.MENU">
+        <MappingFragment StoreEntitySet="MENU">
+          <ScalarProperty Name="PARENTID" ColumnName="PARENTID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MENU_NAME" ColumnName="MENU_NAME" />
+          <ScalarProperty Name="MENU_ADDRESS" ColumnName="MENU_ADDRESS" />
+          <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERLOGINs">
+      <EntityTypeMapping TypeName="CMSAPPModel.USERLOGIN">
+        <MappingFragment StoreEntitySet="USERLOGIN">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASSWRD" ColumnName="PASSWRD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
